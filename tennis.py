@@ -6,5 +6,6 @@ class Game:
     def scored(self, player):
         if(player == 1):
             return (15,0)
-        return True
+        elif(player ==2):
+            return(0,15)
 
