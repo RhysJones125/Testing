@@ -17,6 +17,8 @@ class Game:
 
         if self.player_one_score > 40 and self.player_two_score == 40:
             return "player 1 advantage"
+        elif self.player_two_score > 40 and self.player_one_score == 40:
+            return "player 2 advantage"
         elif self.player_one_score > 40:
             return "player 1 wins"
         elif self.player_two_score > 40:
