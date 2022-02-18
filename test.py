@@ -21,3 +21,16 @@ def test_player_2_scored_twice_returns_0_30():
     score = game.scored(2)
     score = game.scored(2)
     assert score == (0,30)
+
+def test_both_players_score_returns_15_15():
+    game = Game()
+    game.scored(1)
+    score = game.scored(2)
+    assert score == (15,15)
+
+def test_player_1_scores_thrice_returns_40_0():
+    game = Game()
+    game.scored(1)
+    game.scored(1)
+    score = game.scored(1)
+    assert score == (40, 0)
