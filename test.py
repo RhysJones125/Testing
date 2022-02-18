@@ -34,3 +34,10 @@ def test_player_1_scores_thrice_returns_40_0():
     game.scored(1)
     score = game.scored(1)
     assert score == (40, 0)
+
+def test_player_2_scores_thrice_returns_0_40():
+    game = Game()
+    game.scored(2)
+    game.scored(2)
+    score = game.scored(2)
+    assert score == (0, 40)
