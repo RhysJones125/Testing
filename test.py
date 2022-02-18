@@ -49,3 +49,11 @@ def test_player_1_scores_4times_returns_player1_wins():
     game.scored(1)
     score=game.scored(1)
     assert score=="player 1 wins"
+
+def test_player_2_scores_4times_returns_player2_wins():
+    game = Game()
+    game.scored(2)
+    game.scored(2)
+    game.scored(2)
+    score=game.scored(2)
+    assert score=="player 2 wins"
