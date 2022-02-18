@@ -5,7 +5,12 @@ class Game:
 
     def scored(self, player):
         if(player == 1):
-            return (15,0)
+            self.player_one_score+=15
         elif(player ==2):
-            return(0,15)
+            self.player_two_score=15
+        return (self.player_one_score, self.player_two_score)
+
+        
+        
+
 
