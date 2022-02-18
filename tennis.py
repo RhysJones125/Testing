@@ -1,9 +1,10 @@
-def tennis(round):
-    if round==1:
-        return 15
-    if round==2:
-        return 30
-    if round==3:
-        return 40
-    return True
+class Game:
+    def __init__(self):
+        self.player_one_score = 0
+        self.player_two_score = 0
+
+    def scored(self, player):
+        if(player == 1):
+            return (15,0)
+        return True
 

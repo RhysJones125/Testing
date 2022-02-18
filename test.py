@@ -1,13 +1,11 @@
-from tennis import tennis
+from tennis import Game
 
-def test_player_score_is15_on_round1():
-    scored=tennis(1)
-    assert scored == 15
+def test_player_1_scored_returns_15_0():
+    game = Game()
+    score = game.scored(1)
+    assert score == (15,0)
 
-def test_player_score_is30_on_round2():
-    scored=tennis(2)
-    assert scored == 30
-
-def test_player_score_is40_on_round3():
-    scored=tennis(3)
-    assert scored == 40
+def test_player_2_scored_returns_0_15():
+    game = Game()
+    score = game.scored(1)
+    assert score == (0,15)
