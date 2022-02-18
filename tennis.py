@@ -9,6 +9,8 @@ class Game:
                 self.player_one_score+=15
             else: self.player_one_score+=10
         elif(player == 2):
-            self.player_two_score+=15
+            if self.player_two_score<30:
+                self.player_two_score+=15
+            else: self.player_two_score+=10
 
         return (self.player_one_score, self.player_two_score)
