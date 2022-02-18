@@ -18,5 +18,7 @@ class Game:
                 self.player_two_score+=10
             else:
                 return "player 2 wins"
+        if(self.player_one_score==40 and self.player_two_score==40):
+            return "deuce"
 
         return (self.player_one_score, self.player_two_score)

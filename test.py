@@ -67,3 +67,14 @@ def test_both_players_score_40_returns_deuce():
     game.scored(1)
     score=game.scored(1)
     assert score=="deuce"
+
+def test_deuce_then_player_1_scores_returns_player1_advantage():
+    game = Game()
+    game.scored(2)
+    game.scored(2)
+    score=game.scored(2)
+    game.scored(1)
+    game.scored(1)
+    game.scored(1)
+    score=game.scored(1)
+    assert score=="player 1 advantage"
