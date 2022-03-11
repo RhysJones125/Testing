@@ -72,9 +72,32 @@ def test_deuce_then_player_1_scores_returns_player1_advantage():
     game = Game()
     game.scored(2)
     game.scored(2)
-    score=game.scored(2)
+    game.scored(2)
     game.scored(1)
     game.scored(1)
     game.scored(1)
     score=game.scored(1)
     assert score=="player 1 advantage"
+
+def test_deuce_then_player_2_scores_returns_player2_advantage():
+    game = Game()
+    game.scored(2)
+    game.scored(2)
+    game.scored(2)
+    game.scored(1)
+    game.scored(1)
+    game.scored(1)
+    score=game.scored(2)
+    assert score=="player 2 advantage"
+
+def test_player_1_advantage_then_scores_returns_player1_wins():
+    game = Game()
+    game.scored(2)
+    game.scored(2)
+    game.scored(2)
+    game.scored(1)
+    game.scored(1)
+    game.scored(1)
+    game.scored(1)
+    score=game.scored(1)
+    assert score=="player 1 wins"
